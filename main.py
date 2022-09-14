@@ -47,11 +47,11 @@ def get_weather():
 # 获取情话
 def get_text():
   # url = "https://v2.alapi.cn/api/qinghua?token=LwExDtUWhF3rH5ib"
-  url = "https://api.vvhan.com/api/love?type=json"
+  url = "https://api.lovelive.tools/api/SweetNothings?type=json"
   res = requests.get(url).json()
   if res is None:
     return None
-  text = res['ishan']
+  text = res['returnObj'][0]
   return text
 
 # 获取当前日期为星期几

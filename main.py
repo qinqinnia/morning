@@ -48,7 +48,7 @@ def get_weather():
 def get_text():
   # url = "https://v2.alapi.cn/api/qinghua?token=LwExDtUWhF3rH5ib"
   url = "https://api.vvhan.com/api/love?type=json"
-  res = requests.get(url)
+  res = requests.get(url).json()
   if res is None:
     return None
   text = res['ishan']
